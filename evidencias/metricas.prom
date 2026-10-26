@@ -1,0 +1,9 @@
+# HELP logins_invalidos_total  
+# TYPE logins_invalidos_total counter
+logins_invalidos_total 2.0
+# HELP logins_validos_total  
+# TYPE logins_validos_total counter
+logins_validos_total 1.0
+# HELP usuarios_bloqueados  
+# TYPE usuarios_bloqueados gauge
+usuarios_bloqueados 1.0

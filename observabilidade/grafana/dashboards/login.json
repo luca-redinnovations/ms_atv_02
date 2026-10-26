@@ -1,0 +1,134 @@
+{
+  "id": null,
+  "panels": [
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "prometheus"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "decimals": 0,
+          "min": 0
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 8,
+        "x": 0,
+        "y": 0
+      },
+      "id": 1,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        }
+      },
+      "targets": [
+        {
+          "expr": "logins_validos_total",
+          "instant": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Logins válidos",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "prometheus"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "decimals": 0,
+          "min": 0
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 8,
+        "x": 8,
+        "y": 0
+      },
+      "id": 2,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        }
+      },
+      "targets": [
+        {
+          "expr": "logins_invalidos_total",
+          "instant": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Logins inválidos",
+      "type": "stat"
+    },
+    {
+      "datasource": {
+        "type": "prometheus",
+        "uid": "prometheus"
+      },
+      "fieldConfig": {
+        "defaults": {
+          "decimals": 0,
+          "min": 0
+        },
+        "overrides": []
+      },
+      "gridPos": {
+        "h": 7,
+        "w": 8,
+        "x": 16,
+        "y": 0
+      },
+      "id": 3,
+      "options": {
+        "colorMode": "value",
+        "graphMode": "none",
+        "reduceOptions": {
+          "calcs": [
+            "lastNotNull"
+          ],
+          "fields": "",
+          "values": false
+        }
+      },
+      "targets": [
+        {
+          "expr": "usuarios_bloqueados",
+          "instant": true,
+          "refId": "A"
+        }
+      ],
+      "title": "Usuários bloqueados",
+      "type": "stat"
+    }
+  ],
+  "refresh": "5s",
+  "schemaVersion": 41,
+  "time": {
+    "from": "now-15m",
+    "to": "now"
+  },
+  "title": "Atividade 2 — Segurança e Observabilidade",
+  "uid": "atividade-2-login",
+  "version": 6
+}

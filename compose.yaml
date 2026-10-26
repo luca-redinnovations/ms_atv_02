@@ -1,0 +1,25 @@
+services:
+  login:
+    build: .
+    ports: ["8080:8080"]
+    environment:
+      BOOTSTRAP_USERNAME: ${BOOTSTRAP_USERNAME:?Defina BOOTSTRAP_USERNAME}
+      BOOTSTRAP_SENHA: ${BOOTSTRAP_SENHA:?Defina BOOTSTRAP_SENHA}
+    volumes: ["login-data:/app/dados"]
+  prometheus:
+    image: prom/prometheus:v3.5.0
+    ports: ["9090:9090"]
+    volumes: ["./observabilidade/prometheus.yml:/etc/prometheus/prometheus.yml:ro"]
+    depends_on: [login]
+  grafana:
+    image: grafana/grafana:12.1.0
+    ports: ["3000:3000"]
+    environment:
+      GF_SECURITY_ADMIN_USER: ${GRAFANA_USERNAME:?Defina GRAFANA_USERNAME}
+      GF_SECURITY_ADMIN_PASSWORD: ${GRAFANA_SENHA:?Defina GRAFANA_SENHA}
+    volumes:
+      - ./observabilidade/grafana/provisioning:/etc/grafana/provisioning:ro
+      - ./observabilidade/grafana/dashboards:/var/lib/grafana/dashboards:ro
+    depends_on: [prometheus]
+volumes:
+  login-data:

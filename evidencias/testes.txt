@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: aula.microservicos.login.Atividade2Tests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 18.28 s -- in aula.microservicos.login.Atividade2Tests
+
+-------------------------------------------------------------------------------
+Test set: aula.microservicos.login.LoginLimitesTests
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.636 s -- in aula.microservicos.login.LoginLimitesTests
+
+Resultado: 4 testes, 0 falhas, 0 erros, 0 ignorados.
+Comando: ./mvnw -o -B clean verify
+BUILD SUCCESS
